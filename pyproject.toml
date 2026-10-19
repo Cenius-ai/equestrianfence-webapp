@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "equestrianfence"
+version = "1.0.0"
+description = "Rectangular horse-pasture fence layout, post spacing and gate checklist from the terminal"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "EquestrianFence" }]
+keywords = ["fence", "pasture", "horse", "cli", "calculator"]
+classifiers = [
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "Programming Language :: Python :: 3",
+  "Topic :: Utilities",
+]
+# The tool itself is standard library only: nothing to install at runtime.
+dependencies = []
+
+[project.scripts]
+equestrianfence = "equestrian_fence:main"
+
+[tool.setuptools]
+py-modules = ["equestrian_fence"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
